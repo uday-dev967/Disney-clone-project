@@ -1,0 +1,27 @@
+// variables
+
+$color-primary-text: #f9f9f9;
+$color-secondary-text: #f3f3f3;
+$color-primary-bg: #040714;
+$color-secondary-bg: #777777;
+$color-primary-btn: rgb(8, 56, 248);
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}

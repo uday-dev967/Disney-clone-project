@@ -1,0 +1,309 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.container #main {
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(12, 6, 41, 0.7), rgba(6, 2, 35, 0.7)), url("../assets/disney-plus-what-if-poster-nc0w61aqsodv7yvk.jpg");
+}
+.container #main .main__header {
+  background-color: #040714;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+.container #home {
+  background-size: cover;
+  background-position: center;
+  background-image: url("../assets/home-background.png");
+  height: 100vh;
+  overflow-y: auto;
+}
+.container #home .home__header {
+  background-color: #040714;
+  width: 100vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1.5rem;
+  z-index: 1;
+}
+
+.main__content {
+  height: 90vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.main__content-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.hide {
+  display: none;
+}
+
+.logo {
+  width: 10rem;
+  height: auto;
+}
+
+.btn {
+  border: 0.2rem solid rgb(8, 56, 248);
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  color: #f9f9f9;
+  font-size: 1.5rem;
+  background-color: transparent;
+}
+.btn:hover {
+  background-color: rgb(8, 56, 248);
+  scale: 1.1;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+  font-weight: 600;
+}
+
+.main__page-logos-1 {
+  width: 11rem;
+  height: auto;
+}
+.main__page-logos-container {
+  display: flex;
+  flex-direction: row;
+  grid-column: 1/-1;
+}
+.main__page-logos-2 {
+  width: 7rem;
+  height: 4rem;
+}
+.main__page-logos-2 + p {
+  color: #f9f9f9;
+  font-size: 3rem;
+  font-weight: 500;
+  font-style: oblique;
+}
+.main__page-logos-get-all {
+  grid-column: 1/-1;
+  display: block;
+  background-color: rgb(8, 56, 248);
+  width: 100%;
+  height: 4rem;
+  font-weight: 700;
+  color: #f9f9f9;
+  border: none;
+  border-radius: 0.5rem;
+}
+.main__page-logos-get-all:hover {
+  opacity: 0.9;
+}
+
+.home__header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+}
+.home__header nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__header-nav-logo {
+  width: 100px;
+  height: auto;
+  margin-right: 2rem;
+}
+.home__header-nav-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding-right: 1rem;
+}
+.home__header-nav-item:hover {
+  font-weight: 600;
+  cursor: pointer;
+}
+.home__header-nav-item:hover p {
+  border: none;
+  border-bottom: 0.3rem solid #f9f9f9;
+}
+.home__header-nav-item-icon {
+  width: 2.5rem;
+  height: auto;
+  color: #f9f9f9;
+  margin-left: 1rem;
+}
+.home__header-nav-item-category {
+  color: #f9f9f9;
+  font-size: 1.6rem;
+  text-transform: uppercase;
+  margin-left: 0.5rem;
+}
+
+/* carousel.css */
+.slider {
+  padding: 2rem;
+  margin-top: 5rem;
+  position: relative;
+}
+.slider-wraper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+.slider-content {
+  display: flex;
+  gap: 1rem;
+  aspect-ratio: 15/4;
+  overflow-x: hidden;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  box-shadow: 0 0 3rem 0 rgba(0, 0, 0, 0.726);
+  border-radius: 2rem;
+}
+.slider-img {
+  flex: 1 0 100%;
+  border-radius: 2rem;
+  scroll-snap-align: start;
+  object-position: center;
+  object-fit: cover;
+}
+.slider-nav {
+  display: flex;
+  gap: 1rem;
+  position: absolute;
+  bottom: 3rem;
+  left: 50%;
+  transform: translate(-50%);
+  z-index: 1;
+}
+.slider-indicators {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  opacity: 0.7;
+  gap: 1rem;
+  transition: opacity ease 500ms;
+  background-color: #ffffff;
+}
+.slider-indicators:hover {
+  opacity: 1;
+}
+
+.home__content-category-container {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+}
+.home__content-category-container .home__content-category {
+  width: 22rem;
+  height: 13rem;
+  background-image: linear-gradient(#30323e, #1e1f2a);
+  border: 0.3rem solid #777777;
+  border-radius: 1rem;
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.73);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home__content-category-container .home__content-category:hover {
+  border: 0.3rem solid #ffffff;
+  transform: scale(1.01);
+}
+.home__content-category-container .home__content-category-img {
+  width: 25rem;
+  height: auto;
+}
+
+.home__categorey-slider-container .slider-wrap {
+  position: relative;
+  height: 21rem;
+}
+.home__categorey-slider-container .slider-wrap .slider-container {
+  margin: 6rem;
+  transition: 1s;
+}
+.home__categorey-slider-container .slider-wrap .slider-container .slider-main {
+  position: absolute;
+  display: flex;
+  width: 95%;
+  height: 21rem;
+  padding-bottom: 5rem;
+  padding-top: 1rem;
+  overflow-x: hidden;
+  gap: 2.5rem;
+}
+.home__categorey-slider-container .slider-wrap .slider-container .slider-main .slider-item {
+  box-shadow: 0 2rem 3rem 0 rgba(0, 0, 0, 0.73);
+  border-radius: 2rem;
+}
+.home__categorey-slider-container .slider-wrap .slider-container .slider-main .slider-item .slider-img {
+  max-width: 30rem;
+  height: 100%;
+  object-fit: cover;
+}
+.home__categorey-slider-container .slider-wrap .slider-container .slider-main .slider-item:hover {
+  border: 0.3rem solid #ffffff;
+}
+
+.home__slider-btn {
+  position: absolute;
+  top: 40%;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.home__slider-btn .btn-prev,
+.home__slider-btn .btn-next {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  color: #ffffff;
+}
+.home__slider-btn .btn-prev:hover,
+.home__slider-btn .btn-next:hover {
+  cursor: pointer;
+}
+.home__slider-btn .btn-prev .arrow,
+.home__slider-btn .btn-next .arrow {
+  width: 3rem;
+  height: 3rem;
+  stroke-opacity: 0;
+}
+.home__slider-btn .btn-prev .arrow:hover,
+.home__slider-btn .btn-next .arrow:hover {
+  stroke-opacity: 1;
+  transition: all 300ms ease;
+}
+
+/*# sourceMappingURL=index.css.map */

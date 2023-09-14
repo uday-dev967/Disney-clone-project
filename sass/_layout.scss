@@ -1,0 +1,60 @@
+.container {
+  #main {
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    background-position: center;
+    background-image: linear-gradient(
+        to right,
+        rgba(12, 6, 41, 0.7),
+        rgba(6, 2, 35, 0.7)
+      ),
+      url("../assets/disney-plus-what-if-poster-nc0w61aqsodv7yvk.jpg");
+
+    .main__header {
+      background-color: $color-primary-bg;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.5rem;
+    }
+  }
+
+  #home {
+    background-size: cover;
+    background-position: center;
+    background-image: url("../assets/home-background.png");
+    height: 100vh;
+    overflow-y: auto;
+
+    .home__header {
+      background-color: $color-primary-bg;
+      width: 100vw;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 1.5rem;
+      z-index: 1;
+    }
+  }
+}
+
+.main__content {
+  height: 90vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-items: center;
+    align-items: center;
+    gap: 1rem;
+  }
+}
+
+.hide {
+  display: none;
+}
