@@ -1,12 +1,20 @@
 const loginButton = document.getElementById("loginBtn");
 const homePage = document.getElementById("home");
+// initially home page is hidden
+
 homePage.classList.add("hide");
 const mainPage = document.getElementById("main");
 const logoutButton = document.getElementById("logoutBtn");
-const sliderMain = document.getElementById("slider-main");
-const items = document.getElementsByClassName("slider-item");
-const firstItem = items[0];
-const lastItem = items[items.length - 1];
+
+// carousel slider elements
+const wrapper = document.querySelector(".wrapper");
+const carousel = document.querySelector(".carousel");
+let firstCardWidth;
+const arrowBtns = wrapper.querySelectorAll("button");
+console.log(firstCardWidth);
+
+const carouselChildrens = [...carousel.children];
+
 // login and logout functions
 loginButton.addEventListener("click", login);
 logoutButton.addEventListener("click", logout);
@@ -22,12 +30,12 @@ function logout() {
   mainPage.classList.remove("hide");
 }
 
-function next() {
-  if (lastItem !== items[4]) sliderMain.append(items[0]);
-}
-
-function prev() {
-  if (items[items.length - 1] !== lastItem) {
-    sliderMain.prepend(items[items.length - 1]);
-  }
-}
+// carousel slider buttons working funtion
+arrowBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    firstCardWidth = document.querySelector(".card").offsetWidth;
+    console.log(btn.id);
+    console.log(firstCardWidth);
+    carousel.scrollLeft += btn.id == "prev" ? -firstCardWidth : firstCardWidth;
+  });
+});
