@@ -27,14 +27,16 @@
     background-image: url("../assets/home-background.png");
     height: 100vh;
     overflow-y: auto;
-
+    &::-webkit-scrollbar {
+      display: none;
+    }
     .home__header {
       background-color: $color-primary-bg;
       width: 100vw;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 0 1.5rem;
+      padding: 0 1.8rem;
       z-index: 1;
     }
   }
